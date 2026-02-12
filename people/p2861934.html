@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+        
         <style>
-            p.dotted {border-style: dotted;}
+            body {
+            margin: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #7be435;
+            color: #FFF;
+            padding: 0 0 0 .5em;
+        }
+        nav a {
+            padding: .5em 1em;
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        main {
+            margin: 1em;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            border: 3px solid #7be435;
+
+        }
+
+        .namefont {
+            font-size: xx-large;
+            align-self: center;
+            background-color:rgb(84, 168, 252);
+        }
         </style>
+
+        
            <title> Aum Gajjar</title> 
     </head>
     <body>
-            <h1>
+            <h1 class="namefont" >
                 Aum Gajjar
             </h1>
 
@@ -30,8 +69,8 @@
             <p2>
                 Ideas:
             </p2>
-
-            <p3>
+            <div class ="center">
+                <p3>
                 <ul>
                     <li>Journal</li>
                     <li>To-do List</li>
@@ -39,6 +78,8 @@
                     <li>Recipes page</li>
                     <li>Rental service</li>
                 </ul>
-            </p3>
+                </p3>
+            </div>
+            
     </body>
 </html>
