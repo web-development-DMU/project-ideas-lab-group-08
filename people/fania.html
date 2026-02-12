@@ -37,15 +37,38 @@
         }
 
         main {
-            margin: 1em;
+            background: linear-gradient(to top left, #57026c5c, #ff01e127);
+            margin: 0;
+        }
+
+        main, main > section:first-of-type {
+            padding: 1em;
             display: flex;
             justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        section {
+            margin: 2em;
         }
 
         img {
             border-radius: 50%;
             aspect-ratio: 1;
             object-fit: cover;
+        }
+
+        main > section:last-of-type {
+            width: 100vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        main > section:last-of-type img {
+            border-radius: 0;
         }
 
     </style>
@@ -68,24 +91,37 @@
 
     <main>
         <section>
-            <h2>Hello Group!</h2>
-            <p>My name is Fania, I'm your tutor.</p>
-            
-            <details>
-                <summary>
-                    I love these things:
-                </summary>
-                <ul>
-                    <li>JavaScript</li>
-                    <li>CSS</li>
-                    <li>Cats</li>
-                </ul>
-            </details>
-        </section>
-        <section>
-            <img src="../imgs/cats.webp" alt="image of many cats">
+            <section>
+                <h2>Hello Cat Lovers!</h2>
+                <p>My name is Fania, I'm your tutor.</p>
+                
+                <details>
+                    <summary>
+                        I love these things:
+                    </summary>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>CSS</li>
+                        <li>Cats</li>
+                    </ul>
+                </details>
+            </section>
+
+            <section>
+                <img src="../imgs/cats.webp" alt="image of many cats">
+            </section>
         </section>
 
+        <section>
+            <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
+            <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
+            <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
+            <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
+            <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
+            <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
+            <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
+            <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
+        </section>
     </main>
 
 
