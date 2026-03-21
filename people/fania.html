@@ -11,6 +11,7 @@
         }
         header {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
             background: #57026c;
@@ -18,7 +19,7 @@
             padding: 0 0 0 1em;
         }
         header h1 {
-            display: none;
+            font-size: 1.5em;
         }
         header div {
             display: flex;
@@ -33,6 +34,11 @@
             object-fit: cover;
         }
 
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+
         nav a {
             padding: .5em 1em;
             color: #FFF;
@@ -42,14 +48,19 @@
         main {
             background: linear-gradient(to top left, #57026c5c, #ff01e127);
             margin: 0;
+            padding: 0;
         }
 
         main, main > section:first-of-type {
-            padding: 1em;
+            /* padding: 1em; */
             display: flex;
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
+        }
+
+        main > section:first-of-type {
+            padding: 2em;
         }
 
         section {
@@ -63,31 +74,46 @@
             width: 200px;
         }
 
-        main > section:last-of-type {
+        main > section.gallery {
             width: 100vw;
             display: flex;
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
             gap: 10px;
+            background: linear-gradient(to top right, #9431ac, #be63d4);
+            background-size: 10% 20%;
+            background-repeat: repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 2em;
         }
-        main > section:last-of-type img {
+        main > section.gallery img {
             border-radius: 0;
             width: 100px;
         }
 
+        footer {
+            text-align: right;
+            background: #57026c;
+            color: #FFF;
+            padding: .5em 1em;
+        }
 
         @media (min-width: 500px) {
             section {
-                margin: 2em;
+                /* margin: 2em; */
             }
             img {
                 width: 100%;
             }
-            header h1 {
-                display: block;
+            header, nav {
+                flex-direction: row;
             }
-            main > section:last-of-type img {
+            header h1 {
+                font-size: 2em;
+            }
+            main > section.gallery img {
                 width: 200px;
             }
         }
@@ -133,7 +159,7 @@
             </section>
         </section>
 
-        <section>
+        <section class="gallery">
             <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
             <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
             <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
@@ -143,8 +169,23 @@
             <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
             <img src="https://cataas.com/cat?type=square&position=center" alt="random cat image from api">
         </section>
+
+        <section class="facts">
+            <h2>Cat Facts</h2>
+            <ul>
+                <li>they are fluffy</li>
+                <li>they are cute</li>
+                <li>they are furry</li>
+                <li>they are better than dogs</li>
+                <li>they are fluffy</li>
+                <li>they are fluffy</li>
+            </ul>
+        </section>
+
     </main>
 
-
+    <footer>
+        <p>By Fania</p>
+    </footer>
 </body>
 </html>
